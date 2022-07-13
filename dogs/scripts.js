@@ -10,7 +10,7 @@ app.appendChild(logo)
 app.appendChild(container)
 
 var request = new XMLHttpRequest()
-request.open('GET', 'https://dog.ceo/dog-api/', true)
+request.open('GET', 'https://dog.ceo/api/breed/spaniel/cocker/images', true)
 request.onload = function () {
   // Begin accessing JSON data here
   var data = JSON.parse(this.response)
@@ -29,6 +29,7 @@ request.onload = function () {
       container.appendChild(card)
       card.appendChild(h1)
       card.appendChild(p)
+      card.appendChild(img)
     })
   } else {
     const errorMessage = document.createElement('marquee')
